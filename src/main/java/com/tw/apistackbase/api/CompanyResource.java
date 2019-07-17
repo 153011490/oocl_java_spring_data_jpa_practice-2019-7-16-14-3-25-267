@@ -31,4 +31,5 @@ public class CompanyResource {
     public void delete(@PathVariable("id") Long id){
         companyRepository.deleteById(id);
     }
+
 }
