@@ -16,6 +16,11 @@ public class CompanyResource {
     public Iterable<Company> list() {
         return companyRepository.findAll();
     }
-    
+
+    @PostMapping(produces = {"application/json"})
+    public Company add(@RequestBody Company company) {
+        return companyRepository.save(company);
+    }
+
 
 }
